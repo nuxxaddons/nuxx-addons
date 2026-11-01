@@ -1,0 +1,91 @@
+{
+  "nombreSitio": "Nuxx Addons",
+  "autor": "Nuxx Addons",
+  "colores": {
+    "fondo": "#070d24",
+    "superficie": "#0e1a42",
+    "borde": "#244a9e",
+    "texto": "#eaf2ff",
+    "textoSuave": "#a2b8e3",
+    "acento": "#3ea6ff",
+    "textoAcento": "#04102e"
+  },
+  "enlaces": [
+    {
+      "texto": "YouTube",
+      "url": "https://youtube.com/@nuxxaddons"
+    }
+  ],
+  "idiomaPorDefecto": "en",
+  "idiomas": {
+    "en": {
+      "nombre": "English",
+      "titular": "Minecraft addons made by Nuxx",
+      "descripcion": "All free. Download the file, open it with Minecraft and enable the packs in your world.",
+      "textos": {
+        "buscar": "Search addon…",
+        "todos": "All",
+        "descargar": "Download",
+        "version": "Minecraft",
+        "idiomaAddon": "Addon language:",
+        "pronto": "More language packs coming soon",
+        "vacio": "No addons match your search. Try another word or clear the filter.",
+        "error": "Could not load the data. If you opened index.html directly, upload it to GitHub Pages or use a local server.",
+        "pie": "Made by {autor} · {anio} · Not affiliated with Mojang or Microsoft",
+        "selector": "Language"
+      },
+      "etiquetas": {
+        "horror": "Horror",
+        "mobs": "Mobs",
+        "bosses": "Bosses",
+        "survival": "Survival"
+      }
+    },
+    "es": {
+      "nombre": "Español",
+      "titular": "Addons de Minecraft hechos por Nuxx",
+      "descripcion": "Todos gratis. Descarga el archivo, ábrelo con Minecraft y activa los packs en tu mundo.",
+      "textos": {
+        "buscar": "Buscar addon…",
+        "todos": "Todos",
+        "descargar": "Descargar",
+        "version": "Minecraft",
+        "idiomaAddon": "Idioma del addon:",
+        "pronto": "Pronto más extensiones de idiomas",
+        "vacio": "No hay addons con esa búsqueda. Prueba con otra palabra o quita el filtro.",
+        "error": "No se pudieron cargar los datos. Si abriste index.html directo, súbelo a GitHub Pages o usa un servidor local.",
+        "pie": "Hecho por {autor} · {anio} · No afiliado a Mojang ni Microsoft",
+        "selector": "Idioma"
+      },
+      "etiquetas": {
+        "horror": "Terror",
+        "mobs": "Mobs",
+        "bosses": "Jefes",
+        "survival": "Supervivencia"
+      }
+    },
+    "pt": {
+      "nombre": "Português",
+      "titular": "Addons de Minecraft feitos pelo Nuxx",
+      "descripcion": "Todos grátis. Baixe o arquivo, abra com o Minecraft e ative os packs no seu mundo.",
+      "textos": {
+        "buscar": "Buscar addon…",
+        "todos": "Todos",
+        "descargar": "Baixar",
+        "version": "Minecraft",
+        "idiomaAddon": "Idioma do addon:",
+        "pronto": "Em breve mais extensões de idiomas",
+        "vacio": "Nenhum addon encontrado. Tente outra palavra ou remova o filtro.",
+        "error": "Não foi possível carregar os dados. Se você abriu o index.html direto, envie para o GitHub Pages ou use um servidor local.",
+        "pie": "Feito por {autor} · {anio} · Não afiliado à Mojang nem à Microsoft",
+        "selector": "Idioma"
+      },
+      "etiquetas": {
+        "horror": "Terror",
+        "mobs": "Mobs",
+        "bosses": "Chefes",
+        "survival": "Sobrevivência"
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "nombre": "One Savior",
+    "descripcion": {
+      "en": "Corruption spreads across the world and a final boss awaits on day 100: Infinite Geak. Includes corrupted creatures, new blocks and an ability core.",
+      "es": "Corrupción que se extiende por el mundo y un jefe final el día 100: Infinite Geak. Incluye criaturas corrompidas, bloques nuevos y un núcleo de habilidad.",
+      "pt": "A corrupção se espalha pelo mundo e um chefe final aparece no dia 100: Infinite Geak. Inclui criaturas corrompidas, novos blocos e um núcleo de habilidade."
+    },
+    "version": "1.1.0",
+    "minecraft": "1.21+",
+    "etiquetas": [
+      "bosses",
+      "survival"
+    ],
+    "imagen": "one-savior.png",
+    "fecha": "2026-11-01",
+    "descargas": [
+      {
+        "etiqueta": "Descargar",
+        "archivo": "One_Savior.mcaddon",
+        "mb": 0.2
+      }
+    ],
+    "idiomas": [
+      "ESP"
+    ],
+    "pronto": true
+  },
+  {
+    "nombre": "Silent Hours",
+    "descripcion": {
+      "en": "Horror addon with six creatures: The Listener, The Watcher, The Shade, The Echo, The Tenant and The Face. Lots of ambient sound.",
+      "es": "Addon de terror con seis criaturas: The Listener, The Watcher, The Shade, The Echo, The Tenant y The Face. Mucho sonido ambiental.",
+      "pt": "Addon de terror com seis criaturas: The Listener, The Watcher, The Shade, The Echo, The Tenant e The Face. Muito som ambiente."
+    },
+    "version": "1.0",
+    "minecraft": "1.26.50+",
+    "etiquetas": [
+      "horror",
+      "mobs"
+    ],
+    "imagen": "silent-hours.png",
+    "fecha": "2026-10-27",
+    "descargas": [
+      {
+        "etiqueta": {
+          "en": "Full",
+          "es": "Completo",
+          "pt": "Completo"
+        },
+        "archivo": "Silent_Hours.mcaddon",
+        "mb": 0.6
+      },
+      {
+        "etiqueta": {
+          "en": "Remaster",
+          "es": "Remaster",
+          "pt": "Remaster"
+        },
+        "archivo": "Silent_Hours_Remaster.mcaddon",
+        "mb": 0.4
+      },
+      {
+        "etiqueta": {
+          "en": "Low Media (lightweight)",
+          "es": "Low Media (ligero)",
+          "pt": "Low Media (leve)"
+        },
+        "archivo": "Silent_Hours_Low_Media.mcaddon",
+        "mb": 0.2
+      }
+    ],
+    "idiomas": [
+      "ESP"
+    ],
+    "pronto": true
+  },
+  {
+    "nombre": "Empty Room",
+    "descripcion": {
+      "en": "Horror addon with Hunter, Hunter Twin, Executer 002 and The Fallen. Includes custom sounds and animations.",
+      "es": "Addon de terror con Hunter, Hunter Twin, Executer 002 y The Fallen. Con sonidos propios y animaciones.",
+      "pt": "Addon de terror com Hunter, Hunter Twin, Executer 002 e The Fallen. Com sons e animações próprios."
+    },
+    "version": "1.0.1",
+    "minecraft": "1.26.50+",
+    "etiquetas": [
+      "horror",
+      "mobs"
+    ],
+    "imagen": "empty-room.png",
+    "fecha": "2026-10-26",
+    "descargas": [
+      {
+        "etiqueta": {
+          "en": "Full",
+          "es": "Completo",
+          "pt": "Completo"
+        },
+        "archivo": "EmptyRoom_v1_0_1.mcaddon",
+        "mb": 1.8
+      },
+      {
+        "etiqueta": {
+          "en": "Low Media (lightweight)",
+          "es": "Low Media (ligero)",
+          "pt": "Low Media (leve)"
+        },
+        "archivo": "EmptyRoom_LowMedia_v1_0_1.mcaddon",
+        "mb": 0.5
+      }
+    ],
+    "idiomas": [
+      "ENG"
+    ],
+    "pronto": true
+  },
+  {
+    "nombre": "Last Man",
+    "descripcion": {
+      "en": "Horror addon with Last Man, Stalker 934 and the Blinding mobs (pig, cow and zombie). Includes chases, jump scares and a special block.",
+      "es": "Addon de terror con Last Man, Stalker 934 y los Blinding (cerdo, vaca y zombie). Incluye persecuciones, sustos y un bloque especial.",
+      "pt": "Addon de terror com Last Man, Stalker 934 e os Blinding (porco, vaca e zumbi). Inclui perseguições, sustos e um bloco especial."
+    },
+    "version": "2.0.1",
+    "minecraft": "1.26.50+",
+    "etiquetas": [
+      "horror",
+      "mobs"
+    ],
+    "imagen": "last-man.png",
+    "fecha": "2026-10-26",
+    "descargas": [
+      {
+        "etiqueta": "Remaster 2.0.1",
+        "archivo": "LastMan_remaster_2_0_1.mcaddon",
+        "mb": 1.6
+      },
+      {
+        "etiqueta": "Original 1.0",
+        "archivo": "LastMan.mcaddon",
+        "mb": 1.6
+      }
+    ],
+    "idiomas": [
+      "ENG",
+      "ESP",
+      "POR"
+    ],
+    "pronto": false
+  }
+]

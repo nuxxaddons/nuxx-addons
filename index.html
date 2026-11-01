@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuxx Addons</title>
+<meta name="description" content="Addons de Minecraft gratis hechos por Nuxx Addons.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fondo:#070d24;--superficie:#0e1a42;--borde:#244a9e;--texto:#eaf2ff;
+  --texto-suave:#a2b8e3;--acento:#3ea6ff;--texto-acento:#04102e;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--texto);
+  font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:"Pixelify Sans",ui-monospace,monospace;font-weight:700;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acento);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{border-bottom:2px solid var(--borde)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand img{height:38px;width:auto;display:block}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:var(--texto-suave);text-decoration:none}
+nav a:hover{color:var(--acento)}
+.banner{margin-top:24px;border:2px solid var(--borde);overflow:hidden;background:var(--superficie)}
+.banner img{display:block;width:100%;height:auto;aspect-ratio:32/9;object-fit:cover}
+.hero{padding:28px 0 20px}
+.hero h1{font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.15;max-width:22ch}
+.hero p{color:var(--texto-suave);max-width:54ch;margin:12px 0 0}
+.tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:8px 0 24px}
+.tools input{flex:1 1 220px;background:var(--superficie);border:2px solid var(--borde);color:var(--texto);padding:10px 12px;font:inherit;border-radius:0}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tag{background:transparent;border:2px solid var(--borde);color:var(--texto-suave);padding:6px 10px;font:inherit;font-size:.9rem;cursor:pointer;border-radius:0}
+.tag[aria-pressed="true"]{background:var(--acento);border-color:var(--acento);color:var(--texto-acento)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;padding-bottom:64px}
+.card{background:var(--superficie);border:2px solid var(--borde);padding:16px;display:flex;flex-direction:column;gap:14px}
+.head{display:flex;gap:14px;align-items:center}
+.head img{width:80px;height:80px;flex:none;image-rendering:pixelated;border:2px solid var(--borde);background:var(--fondo)}
+.head h3{font-size:1.3rem;line-height:1.15}
+.meta{font-size:.85rem;color:var(--texto-suave);margin-top:4px}
+.meta b{color:var(--texto);font-weight:600}
+.card p{margin:0;color:var(--texto-suave);font-size:.95rem;flex:1}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:.8rem;border:1px solid var(--borde);color:var(--texto-suave);padding:2px 8px}
+.dls{display:grid;gap:8px}
+.btn{display:flex;justify-content:space-between;gap:12px;background:var(--acento);color:var(--texto-acento);font-weight:700;text-decoration:none;padding:11px 14px;border-bottom:4px solid rgba(0,0,0,.4)}
+.btn small{font-weight:500;opacity:.8}
+.btn:hover{filter:brightness(1.1)}
+.btn:active{border-bottom-width:1px;transform:translateY(3px)}
+.btn.sec{background:transparent;color:var(--texto);border:2px solid var(--borde);border-bottom-width:4px}
+.langs{font-size:.85rem;color:var(--texto-suave)}.langs b{color:var(--texto);font-weight:600;margin-left:6px}.pronto{font-size:.8rem;color:var(--acento)}
+select{background:var(--superficie);color:var(--texto);border:2px solid var(--borde);padding:6px 8px;font:inherit;border-radius:0}
+.nav-r{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.vacio,.error{padding:32px;border:2px dashed var(--borde);color:var(--texto-suave)}
+footer{border-top:2px solid var(--borde);padding:24px 0;color:var(--texto-suave);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Nuxx Addons, inicio"><img src="logo.png" alt="Nuxx Addons"></a>
+    <div class="nav-r"><nav id="enlaces" aria-label="Links"></nav><select id="idioma" aria-label="Language"></select></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="banner"><img src="banner.jpg" alt="Nuxx Addons"></div>
+  <section class="hero">
+    <h1 id="titular">Addons de Minecraft</h1>
+    <p id="descripcion"></p>
+  </section>
+
+  <section aria-label="Buscar addons">
+    <div class="tools">
+      <input id="buscar" type="search" placeholder="Buscar addon…" aria-label="Buscar addon">
+      <div class="tags" id="etiquetas"></div>
+    </div>
+    <div class="grid" id="lista" aria-live="polite"></div>
+  </section>
+</main>
+
+<footer><div class="wrap" id="pie"></div></footer>
+
+<script>
+const $ = id => document.getElementById(id);
+let cfg, addons = [], lang = "en", filtroTag = "", texto = "";
+const css = { fondo:"--fondo", superficie:"--superficie", borde:"--borde", texto:"--texto",
+  textoSuave:"--texto-suave", acento:"--acento", textoAcento:"--texto-acento" };
+
+const tr = v => (v && typeof v === "object") ? (v[lang] || v.en || "") : (v || "");
+const L = () => cfg.idiomas[lang];
+const T = k => L().textos[k];
+function el(tag, cls, txt){ const e = document.createElement(tag); if(cls) e.className = cls; if(txt!=null) e.textContent = txt; return e; }
+
+function elegirIdioma(){
+  let g = null;
+  try { g = localStorage.getItem("nuxx-lang"); } catch(e){}
+  lang = (g && cfg.idiomas[g]) ? g : (cfg.idiomaPorDefecto || "en");
+}
+
+function pintarTodo(){
+  const l = L();
+  document.documentElement.lang = lang;
+  document.title = cfg.nombreSitio;
+  $("titular").textContent = l.titular;
+  $("descripcion").textContent = l.descripcion;
+  $("buscar").placeholder = T("buscar");
+  $("buscar").setAttribute("aria-label", T("buscar"));
+  $("idioma").setAttribute("aria-label", T("selector"));
+  $("pie").textContent = T("pie").replace("{autor}", cfg.autor).replace("{anio}", new Date().getFullYear());
+  pintarEtiquetas(); pintar();
+}
+
+function aplicarConfig(){
+  for (const k in cfg.colores) if (css[k]) document.documentElement.style.setProperty(css[k], cfg.colores[k]);
+  $("enlaces").replaceChildren(...(cfg.enlaces||[]).map(e=>{
+    const a = el("a",null,e.texto); a.href = e.url; a.target = "_blank"; a.rel = "noopener"; return a;
+  }));
+  $("idioma").replaceChildren(...Object.keys(cfg.idiomas).map(k=>{
+    const o = el("option",null,cfg.idiomas[k].nombre); o.value = k; return o;
+  }));
+  $("idioma").value = lang;
+  $("idioma").addEventListener("change", e=>{
+    lang = e.target.value;
+    try { localStorage.setItem("nuxx-lang", lang); } catch(err){}
+    pintarTodo();
+  });
+}
+
+function pintarEtiquetas(){
+  const todas = [...new Set(addons.flatMap(a=>a.etiquetas||[]))];
+  const nom = k => L().etiquetas[k] || k;
+  todas.sort((x,y)=>nom(x).localeCompare(nom(y), lang));
+  $("etiquetas").replaceChildren(...[""].concat(todas).map(k=>{
+    const b = el("button","tag", k ? nom(k) : T("todos"));
+    b.setAttribute("aria-pressed", String(k===filtroTag));
+    b.onclick = ()=>{ filtroTag = k; pintarEtiquetas(); pintar(); };
+    return b;
+  }));
+}
+
+function tarjeta(a){
+  const card = el("article","card");
+  const head = el("div","head");
+  if (a.imagen){ const img = el("img"); img.src = a.imagen; img.alt = ""; img.loading = "lazy"; head.append(img); }
+  const t = el("div"); t.append(el("h3",null,a.nombre));
+  const m = el("div","meta"); m.innerHTML = "v<b></b> · <span></span> <b></b>";
+  const bs = m.querySelectorAll("b"); bs[0].textContent = a.version||"—"; bs[1].textContent = a.minecraft||"—";
+  m.querySelector("span").textContent = T("version");
+  t.append(m); head.append(t);
+  const chips = el("div","chips"); (a.etiquetas||[]).forEach(x=>chips.append(el("span","chip",L().etiquetas[x]||x)));
+  const dls = el("div","dls");
+  (a.descargas||[]).forEach((d,i)=>{
+    const l = el("a","btn"+(i?" sec":"")); l.href = d.archivo; l.setAttribute("download","");
+    l.append(el("span",null,(a.descargas.length>1?tr(d.etiqueta):T("descargar"))));
+    if (d.mb) l.append(el("small",null,d.mb+" MB"));
+    dls.append(l);
+  });
+  card.append(head, el("p",null,tr(a.descripcion)), chips);
+  if ((a.idiomas||[]).length){
+    const lg = el("div","langs",T("idiomaAddon"));
+    a.idiomas.forEach(x=>lg.append(el("b",null,x)));
+    card.append(lg);
+  }
+  if (a.pronto) card.append(el("div","pronto",T("pronto")));
+  card.append(dls);
+  return card;
+}
+
+function pintar(){
+  const q = texto.trim().toLowerCase();
+  const lista = addons
+    .filter(a=>!filtroTag || (a.etiquetas||[]).includes(filtroTag))
+    .filter(a=>!q || (a.nombre+" "+tr(a.descripcion)).toLowerCase().includes(q))
+    .sort((x,y)=>(y.fecha||"").localeCompare(x.fecha||""));
+  if (!lista.length){ $("lista").replaceChildren(el("div","vacio",T("vacio"))); return; }
+  $("lista").replaceChildren(...lista.map(tarjeta));
+}
+
+$("buscar").addEventListener("input", e=>{ texto = e.target.value; pintar(); });
+
+Promise.all([fetch("config.json").then(r=>r.json()), fetch("addons.json").then(r=>r.json())])
+  .then(([c,a])=>{ cfg = c; addons = a; elegirIdioma(); aplicarConfig(); pintarTodo(); })
+  .catch(()=>{
+    $("lista").replaceChildren(el("div","error","Could not load the data. Upload the site to GitHub Pages or use a local server."));
+  });
+</script>
+</body>
+</html>
